@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="aruizS2.Vistas.vInicio"
+             Title="vInicio">
+    <VerticalStackLayout
+        Spacing="25">
+        <Label x:Name="lblUsuario"
+               HorizontalTextAlignment="End"
+               FontSize="14"></Label>
+        <Label 
+            Text="Elementos Visuales"
+
+            TextColor="Blue"
+            FontSize="24"
+            HorizontalTextAlignment="Center">
+            
+        </Label>
+
+        <Entry x:Name="txtDato"
+               Placeholder="Ingrese su direccion"
+               MaxLength="10">
+            
+        </Entry>
+        <Image x:Name="img" Source="https://images.credly.com/images/f21ec585-4011-4fe7-a3a6-5f4469ba924c/blob.png"
+               HeightRequest="100"></Image>
+
+        <Picker x:Name="pkCiudades" Title="Ciudades">
+            <Picker.Items>
+                <x:String>Quito</x:String>
+                <x:String>Guayaquil</x:String>
+                <x:String>Cuenca</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Button x:Name="btnSeleccion"
+                Text="ver elemento seleccionado"
+                Clicked="btnSeleccion_Clicked"></Button>
+
+        <DatePicker x:Name="dpFecha"  Format="MM/dd/yyyy"></DatePicker>
+
+        <Label x:Name="lblFecha" FontSize="20" TextColor="Red"></Label>
+
+        <Button x:Name="btnFecha" Text="ver Fecha"
+        Clicked="btnFecha_Clicked"></Button>
+    </VerticalStackLayout>
+</ContentPage>
